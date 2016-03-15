@@ -96,3 +96,19 @@ Workflow
 #. optionally, browse the results folder (see: `results.html`)
 
 
+Reports
+-------
+
+All intermediate files are stored in the `results` folder:
+
+* QML
+* SLD 1.1
+* SLD 1.0
+* GeoServer GetImage
+* QGIS GetImage
+* DIFF image (image containing the diffs between the two images)
+
+A `results.html` file containing all tests outcomes is also generated:
+
+.. image:: templates/report_snapshot.png
+
