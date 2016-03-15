@@ -1,7 +1,7 @@
 QGIS GeoServer SLD adapter tests
 ================================
 
-This unit tests QGIS an GeoServer rendering engines by comparing WMS GetImage
+This unit tests QGIS and GeoServer rendering engines by comparing WMS GetImage
 output.
 
 Several SLD transformation routines can be tests, currently, the only tested
@@ -50,15 +50,14 @@ Supported variables are:
     * bbox: the bounding box in OGC format
     * width: width of the image in px
     * height: height of the image in px
+    * expected_match: threshold for test success
     * expected_mse: threshold for test success
     * expected_ssim: threshold for test success
 
 
 The snippet here below, can be used inside QGIS to create a new test from the current view,
-by cloning the active layer.
+by cloning the active layer::
 
-
-::
     def makeTest(name=None):
         from qgis.utils import iface
         canvas = iface.mapCanvas()
