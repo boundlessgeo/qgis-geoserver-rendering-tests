@@ -1,0 +1,52 @@
+        <div class="panel panel-default {test_status}">
+            <div class="panel-heading panel-warning" role="tab" id="heading{test_name}">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{test_name}" aria-expanded="true" aria-controls="collapse{test_name}">
+                    {test_title}
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse{test_name}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{test_name}">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>SSIM: {actual_ssim} (min: {expected_ssim}), MSE: {actual_mse} (max: {expected_mse}), MATCH: {actual_match} (min: {expected_match})
+                        </div>
+                        <div class="col-md-6">
+                            <h2>QGIS</h2>
+                            <img class="img img-responsive" src="{qg_img}"></img>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>GeoServer <a onclick="$('#DIFF{test_name}').toggleClass('hidden')" class="btn btn-sm btn-primary" role="button">Diffs</a></h2>
+                            <div class="img-container">
+                                <img class="img img-responsive" src="{gs_img}"></img>
+                                <img id="DIFF{test_name}" class="hidden img img-responsive diff" src="{diff_img}"></img>
+                            </div>
+                            {gs_error}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseSLD{test_name}" aria-expanded="false" aria-controls="collapseSLD{test_name}">
+                                Details
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapseSLD{test_name}">
+                                <div class="well">
+                                    <pre><code class="xml">{sld}</code></pre>
+                                </div>
+                                <p>QGIS URL</p>
+                                <div class="well">
+                                    <a target="_blank" href="{qg_url}"><pre><code class="xml">{qg_url}</code></pre></a>
+                                </div>
+                                <p>GeoServer URL</p>
+                                <div class="well">
+                                    <a target="_blank" href="{gs_url}"><pre><code class="xml">{gs_url}</code></pre></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

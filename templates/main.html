@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.14.2/ol.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <title>QGIS - GeoServer Rendering Comparison</title>
+    <style type="text/css">
+        .panel-default.fail > .panel-heading {
+            background-image: linear-gradient(to bottom, #ff9999 0px, #ff5555 100%);
+            background-repeat: repeat-x;
+        }
+        .panel-default.success > .panel-heading {
+            background-image: linear-gradient(to bottom, #00aa00 0px, #00cc00 100%);
+            background-repeat: repeat-x;
+        }
+        .img {
+            border: solid 1px #ddd;
+        }
+        h4.panel-title {
+            font-weight: bold;
+            color: white;
+        }
+        .img-container {
+            position: relative;
+        }
+        .img.img-responsive.diff {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>QGIS - GeoServer Rendering Results</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-group" id="-accordion" role="tablist" aria-multiselectable="true">
+                {rows}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+  </script>
+  </body>
+</html>
